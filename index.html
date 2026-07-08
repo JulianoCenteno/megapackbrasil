@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mega Pack Católico 3D — Catálogo pronto para vender</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #EAE3D2;
+    --bg-deep: #DED4BC;
+    --ink: #241E1A;
+    --ink-soft: #4A423A;
+    --card: #F6F1E5;
+    --wine: #6E1B2B;
+    --wine-deep: #470F1B;
+    --wine-tint: #F1DFDF;
+    --gold: #A9803F;
+    --gold-soft: #C9A66B;
+    --line: #D3C7AC;
+    --radius: 14px;
+    --shadow: 0 10px 30px rgba(36,30,26,0.10);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:78px; /* espaço pro CTA sticky */
+  }
+  img,svg{display:block; max-width:100%;}
+  a{color:inherit;}
+  .wrap{max-width:560px; margin:0 auto; padding:0 22px;}
+  .eyebrow{
+    font-family:'Work Sans', sans-serif;
+    font-weight:600;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--wine);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:16px; height:1px;
+    background:var(--gold);
+    display:inline-block;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    line-height:1.12;
+    color:var(--ink);
+  }
+  h1{font-size:clamp(32px,8vw,44px); letter-spacing:-0.01em;}
+  h2{font-size:clamp(24px,6.4vw,30px); letter-spacing:-0.005em;}
+  h3{font-size:19px; font-weight:600;}
+  p{color:var(--ink-soft); font-size:16px;}
+  .lede{font-size:17.5px; color:var(--ink-soft);}
+
+  /* ---------- Layer motif (signature element) ---------- */
+  .layer-divider{width:100%; height:34px; margin:6px 0 0;}
+  .layer-figure{width:100%; display:block;}
+
+  /* ---------- Header ---------- */
+  header{
+    padding:16px 0;
+    background:var(--bg);
+    border-bottom:1px solid var(--line);
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Fraunces', serif; font-weight:600; font-size:16px;
+    letter-spacing:-0.01em;
+  }
+  .brand-mark{width:22px; height:22px; flex-shrink:0;}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:38px 0 30px;}
+  .hero-graphic{margin:22px 0 26px;}
+  .hero h1{margin:14px 0 14px;}
+  .hero h1 em{
+    font-style:italic; color:var(--wine); font-weight:600;
+  }
+  .cta-primary{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    background:var(--wine);
+    color:#F6F1E5;
+    font-family:'Work Sans', sans-serif;
+    font-weight:600;
+    font-size:15.5px;
+    letter-spacing:0.01em;
+    padding:17px 22px;
+    border-radius:10px;
+    border:none;
+    width:100%;
+    text-decoration:none;
+    box-shadow:0 8px 20px rgba(110,27,43,0.28);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .cta-primary:active{transform:translateY(1px);}
+  .cta-secondary{
+    display:block; text-align:center;
+    font-size:13.5px; color:var(--ink-soft); margin-top:12px;
+  }
+  .microproof{
+    display:flex; flex-wrap:wrap; gap:8px 18px;
+    margin-top:22px;
+    font-size:13px; color:var(--ink-soft);
+  }
+  .microproof span{display:flex; align-items:center; gap:6px;}
+  .dot{width:5px; height:5px; border-radius:50%; background:var(--gold); flex-shrink:0;}
+
+  /* ---------- Sections generic ---------- */
+  section{padding:40px 0;}
+  .section-alt{background:var(--bg-deep);}
+  .rule{border:none; border-top:1px solid var(--line); margin:0;}
+
+  /* ---------- Identificação ---------- */
+  .qa-list{margin-top:20px; display:flex; flex-direction:column; gap:16px;}
+  .qa-item{
+    padding:16px 18px;
+    background:var(--card);
+    border-radius:var(--radius);
+    border-left:3px solid var(--gold);
+  }
+  .qa-item p{color:var(--ink); font-size:15.5px;}
+
+  /* ---------- Custo / Quebra ---------- */
+  .cost-list{margin-top:18px; display:flex; flex-direction:column; gap:12px;}
+  .cost-item{display:flex; gap:12px; align-items:flex-start;}
+  .cost-icon{
+    width:26px; height:26px; flex-shrink:0; margin-top:2px;
+  }
+  .belief-box{
+    margin-top:22px;
+    padding:22px;
+    background:var(--wine);
+    color:#F3E7E7;
+    border-radius:var(--radius);
+  }
+  .belief-box .eyebrow{color:var(--gold-soft);}
+  .belief-box .eyebrow::before{background:var(--gold-soft);}
+  .belief-box h3{color:#fff; margin:10px 0 8px; font-size:20px;}
+  .belief-box p{color:#EBD9D9; font-size:15.5px;}
+
+  /* ---------- Mecanismo / como funciona ---------- */
+  .steps{margin-top:24px; display:flex; flex-direction:column; gap:0;}
+  .step{
+    display:flex; gap:16px;
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .step:last-child{border-bottom:none;}
+  .step-num{
+    font-family:'Fraunces', serif;
+    font-size:26px; font-weight:600;
+    color:var(--gold);
+    width:34px; flex-shrink:0;
+  }
+  .step h3{margin-bottom:4px;}
+  .step p{font-size:14.5px;}
+
+  /* ---------- Benefícios ---------- */
+  .benefit-grid{margin-top:22px; display:flex; flex-direction:column; gap:14px;}
+  .benefit-card{
+    background:var(--card);
+    border-radius:var(--radius);
+    padding:18px;
+    box-shadow:var(--shadow);
+  }
+  .benefit-card .tag{
+    font-size:11.5px; font-weight:600; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--wine);
+  }
+  .benefit-card h3{margin:6px 0 6px; font-size:17px;}
+  .benefit-card p{font-size:14.5px;}
+
+  /* ---------- Abundância / galeria ---------- */
+  .gallery-grid{
+    margin-top:22px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+  .gallery-card{
+    aspect-ratio:1/1;
+    border-radius:12px;
+    display:flex; flex-direction:column; justify-content:flex-end;
+    padding:12px;
+    position:relative;
+    overflow:hidden;
+    color:#fff;
+    background-size:cover;
+    background-position:center;
+  }
+  .gallery-card span{
+    position:relative; z-index:2;
+    font-family:'Fraunces', serif; font-size:14.5px; font-weight:600;
+  }
+  .gallery-card small{position:relative; z-index:2; font-size:11px; opacity:.85;}
+
+  /* ---------- Carrossel de modelos ---------- */
+  .model-row{
+    display:flex;
+    gap:12px;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scroll-snap-type:x mandatory;
+    padding:18px 4px 6px;
+    scrollbar-width:none;
+  }
+  .model-row::-webkit-scrollbar{display:none;}
+
+  .carousel-wrap{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:4px;
+    padding:0 10px;
+  }
+  .carousel-wrap .model-row{flex:1; min-width:0; padding-left:8px; padding-right:8px;}
+  .carousel-arrow{
+    flex:0 0 auto;
+    width:34px; height:34px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    background:var(--bg);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 3px 8px rgba(36,30,26,0.12);
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .carousel-arrow:active{transform:scale(0.94);}
+  .model-card{
+    flex:0 0 auto;
+    width:150px;
+    scroll-snap-align:start;
+    background:var(--card);
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+  .model-card img{
+    width:150px; height:150px; object-fit:cover; display:block;
+  }
+  .model-card span{
+    display:block;
+    padding:9px 10px 11px;
+    font-size:12px;
+    font-weight:600;
+    color:var(--ink);
+    line-height:1.25;
+  }
+
+  /* ---------- Prova ---------- */
+  .proof-card{
+    margin-top:20px;
+    padding:20px;
+    border:1.5px dashed var(--gold-soft);
+    border-radius:var(--radius);
+    background:var(--card);
+  }
+  .proof-card .eyebrow{color:var(--gold);}
+  .proof-card .eyebrow::before{background:var(--gold);}
+  .proof-card p{margin-top:10px; font-size:14.5px; font-style:italic;}
+
+  /* ---------- Comparação ---------- */
+  .compare{margin-top:22px; display:flex; flex-direction:column; gap:14px;}
+  .compare-col{
+    border-radius:var(--radius);
+    padding:20px;
+  }
+  .compare-col.bad{background:#E7DED0; border:1px solid var(--line);}
+  .compare-col.good{background:var(--wine); color:#F3E7E7;}
+  .compare-col h4{
+    font-family:'Fraunces', serif; font-size:16px; font-weight:600; margin-bottom:12px;
+  }
+  .compare-col.good h4{color:#fff;}
+  .compare-col ul{list-style:none; display:flex; flex-direction:column; gap:9px;}
+  .compare-col li{font-size:14px; display:flex; gap:8px; align-items:flex-start;}
+  .compare-col.bad li{color:var(--ink-soft);}
+  .compare-col.good li{color:#EBD9D9;}
+
+  /* ---------- Stack / bônus ---------- */
+  .stack-list{margin-top:20px; display:flex; flex-direction:column; gap:0;}
+  .stack-item{
+    display:flex; justify-content:space-between; align-items:center; gap:12px;
+    padding:15px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .stack-item:last-child{border-bottom:none;}
+  .stack-name{font-weight:600; font-size:15px;}
+  .stack-desc{font-size:13px; color:var(--ink-soft); margin-top:2px;}
+  .stack-value{
+    font-size:13px; color:var(--gold); font-weight:600; white-space:nowrap;
+  }
+
+  .bonus-grid{margin-top:20px; display:flex; flex-direction:column; gap:14px;}
+  .bonus-card{
+    display:flex; gap:14px; align-items:flex-start;
+    background:var(--card); border-radius:var(--radius); padding:14px;
+    box-shadow:var(--shadow);
+  }
+  .bonus-cover{
+    width:76px; height:auto; aspect-ratio:3/4; object-fit:cover;
+    border-radius:6px; flex-shrink:0;
+    box-shadow:0 4px 10px rgba(36,30,26,0.25);
+  }
+  .bonus-tag{
+    display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:.05em;
+    text-transform:uppercase; color:var(--gold); margin-bottom:3px;
+  }
+  .bonus-card h3{font-size:15.5px; margin-bottom:3px;}
+  .bonus-card p{font-size:13.5px;}
+
+  /* ---------- Oferta / planos ---------- */
+  .plans{margin-top:22px; display:flex; flex-direction:column; gap:16px;}
+  .plan{
+    border-radius:16px;
+    padding:22px;
+    background:var(--card);
+    border:1px solid var(--line);
+    position:relative;
+  }
+  .plan.featured{
+    background:var(--wine);
+    color:#F3E7E7;
+    border:none;
+    box-shadow:0 14px 34px rgba(110,27,43,0.32);
+  }
+  .plan-badge{
+    position:absolute; top:-12px; left:22px;
+    background:var(--gold); color:#fff;
+    font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase;
+    padding:5px 12px; border-radius:999px;
+  }
+  .plan-cover-img{
+    width:calc(100% + 44px);
+    max-width:calc(100% + 44px);
+    height:200px;
+    object-fit:cover;
+    margin:-22px -22px 16px;
+    display:block;
+    border-radius:16px 16px 0 0;
+  }
+  .plan-cover-img.contain{
+    height:auto;
+    aspect-ratio:1/1;
+    object-fit:contain;
+    background:#fff;
+  }
+  .plan h3{font-size:15px; text-transform:uppercase; letter-spacing:.06em; font-weight:600;}
+  .plan.featured h3{color:#F0D9D9;}
+  .plan .price{
+    font-family:'Fraunces', serif; font-size:38px; font-weight:600; margin:10px 0 2px;
+  }
+  .plan .was{
+    font-size:13px; color:var(--ink-soft); text-decoration:line-through;
+  }
+  .plan.featured .was{color:#D8B9B9;}
+  .plan .installment{
+    font-size:12.5px; color:var(--ink-soft); margin:2px 0 0;
+  }
+  .plan.featured .installment{color:#E7D3D3;}
+  .plan ul{list-style:none; margin:16px 0 18px; display:flex; flex-direction:column; gap:9px;}
+  .plan li{font-size:14px; display:flex; gap:8px; align-items:flex-start;}
+  .plan.featured li{color:#EBD9D9;}
+  .plan-cta{
+    display:block; text-align:center; width:100%;
+    padding:14px; border-radius:9px; font-weight:600; font-size:14.5px;
+    text-decoration:none; border:1.5px solid var(--wine); color:var(--wine);
+  }
+  .plan.featured .plan-cta{
+    background:#fff; color:var(--wine-deep); border:none;
+  }
+
+  .anchor-note{
+    margin-top:18px; padding:16px 18px; background:var(--bg-deep);
+    border-radius:12px; font-size:13.5px; color:var(--ink-soft);
+  }
+
+  /* ---------- Garantia ---------- */
+  .guarantee{
+    margin-top:22px;
+    display:flex; gap:16px; align-items:flex-start;
+    background:var(--card); border-radius:var(--radius); padding:20px;
+  }
+  .guarantee-badge{width:74px; height:74px; flex-shrink:0; object-fit:contain;}
+  .guarantee h3{margin-bottom:6px;}
+  .guarantee p{font-size:14.5px;}
+
+  /* ---------- FAQ ---------- */
+  .faq{margin-top:20px; display:flex; flex-direction:column; gap:0;}
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-item summary{
+    list-style:none; cursor:pointer;
+    display:flex; justify-content:space-between; align-items:center; gap:12px;
+    padding:17px 0; font-weight:600; font-size:15px; color:var(--ink);
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-plus{
+    width:20px; height:20px; flex-shrink:0; position:relative;
+  }
+  .faq-plus::before, .faq-plus::after{
+    content:""; position:absolute; background:var(--wine);
+  }
+  .faq-plus::before{width:14px; height:2px; top:9px; left:3px;}
+  .faq-plus::after{width:2px; height:14px; top:3px; left:9px; transition:transform .2s ease;}
+  details[open] .faq-plus::after{transform:rotate(90deg); opacity:0;}
+  .faq-item p{padding:0 0 17px; font-size:14.5px;}
+
+  /* ---------- CTA final ---------- */
+  .final{
+    background:var(--wine-deep);
+    color:#F3E7E7;
+    text-align:center;
+  }
+  .final h2{color:#fff; margin-bottom:12px;}
+  .final p{color:#E0C9C9; margin-bottom:24px;}
+  .final .cta-primary{background:var(--gold); color:var(--wine-deep); box-shadow:0 10px 26px rgba(169,128,63,0.35);}
+  .final .microproof{justify-content:center; color:#D8B9B9;}
+  .final .dot{background:var(--gold-soft);}
+
+  footer{padding:28px 0 20px; text-align:center;}
+  footer p{font-size:12px; color:var(--ink-soft);}
+
+  /* ---------- Sticky CTA ---------- */
+  .sticky-cta{
+    position:fixed; bottom:0; left:0; right:0;
+    background:var(--bg);
+    border-top:1px solid var(--line);
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+    z-index:50;
+    display:flex; gap:10px; align-items:center;
+  }
+  .sticky-cta .info{flex:0 0 auto;}
+  .sticky-cta .info .p{font-family:'Fraunces', serif; font-weight:600; font-size:17px; color:var(--ink);}
+  .sticky-cta .info .l{font-size:10.5px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.04em;}
+  .sticky-cta .cta-primary{padding:13px 18px; font-size:14px; box-shadow:none;}
+
+  @media (min-width:640px){
+    .wrap{max-width:600px;}
+    .gallery-grid{grid-template-columns:repeat(4,1fr);}
+    .plans{flex-direction:row;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2 L12 22 M6 7 L18 7" stroke="var(--wine)" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      Mega Pack Católico 3D
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Para quem já tem impressora 3D</p>
+
+    <div class="hero-graphic">
+      <img src="images/img-jpeg-01.jpg" alt="Peças católicas em 3D: crucifixo, Sagrado Coração, Nossa Senhora, São Miguel Arcanjo e bônus inclusos" style="border-radius:14px; box-shadow:var(--shadow); width:100%;">
+    </div>
+
+    <h1>+100 peças católicas prontas para você <em>vender</em> — sem precisar modelar nada</h1>
+    <p class="lede">A diferença entre uma impressora parada e uma impressora que gera renda é ter o catálogo certo. Baixe, imprima e comece a vender ainda hoje.</p>
+
+    <div style="margin-top:26px;">
+      <a href="#oferta" class="cta-primary">
+        Quero o catálogo completo
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#F6F1E5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <div class="microproof">
+      <span><span class="dot"></span>Acesso imediato</span>
+      <span><span class="dot"></span>Pagamento único</span>
+      <span><span class="dot"></span>Garantia de 14 dias</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== IDENTIFICAÇÃO ===================== -->
+<section class="section-alt">
+  <div class="wrap">
+    <p class="eyebrow">Isso soa familiar?</p>
+    <h2 style="margin-top:12px;">Sua impressora já esteve mais tempo ligada do que hoje?</h2>
+    <div class="qa-list">
+      <div class="qa-item"><p>Você já comprou uma impressora 3D animado com a ideia de vender peças?</p></div>
+      <div class="qa-item"><p>Talvez hoje ela imprima, de vez em quando, chaveiro ou brinquedo — coisas que você sabe que não vendem de verdade.</p></div>
+      <div class="qa-item"><p>O problema começa quando falta um catálogo com demanda real e um caminho claro do "imprimir" até o "vender".</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CUSTO + QUEBRA DE CRENÇA ===================== -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">O custo de continuar assim</p>
+    <h2 style="margin-top:12px;">Cada mês sem um catálogo pronto custa mais do que parece</h2>
+    <div class="cost-list">
+      <div class="cost-item">
+        <svg class="cost-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="var(--gold)" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <p>Tempo procurando arquivo avulso na internet, sem saber se vai imprimir direito.</p>
+      </div>
+      <div class="cost-item">
+        <svg class="cost-icon" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M7 8h6a3 3 0 0 1 0 6H8a3 3 0 0 0 0 6h7" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <p>Material gasto em testes que não geram nenhuma venda.</p>
+      </div>
+      <div class="cost-item">
+        <svg class="cost-icon" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2" stroke="var(--gold)" stroke-width="1.6"/><path d="M4 10h16" stroke="var(--gold)" stroke-width="1.6"/></svg>
+        <p>Uma impressora que devia estar rendendo, parada boa parte do tempo.</p>
+      </div>
+    </div>
+
+    <div class="belief-box">
+      <p class="eyebrow">O verdadeiro obstáculo</p>
+      <h3>Não é falta de talento. É falta de catálogo.</h3>
+      <p>Você não precisa saber modelar em 3D. O que separa quem vende de quem só imprime por hobby é ter peças com demanda testada e um caminho simples de precificação e divulgação.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== APRESENTAÇÃO / COMO FUNCIONA ===================== -->
+<section class="section-alt">
+  <div class="wrap">
+    <p class="eyebrow">O Catálogo Pronto para Vender</p>
+    <h2 style="margin-top:12px;">De impressora parada para catálogo pronto de vendas</h2>
+    <p class="lede" style="margin-top:10px;">O Mega Pack Católico 3D entrega os arquivos e o caminho comercial no mesmo pacote — sem enrolação.</p>
+
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <div>
+          <h3>Acesse</h3>
+          <p>Receba o pack imediatamente após o pagamento, por e-mail e WhatsApp.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <div>
+          <h3>Escolha e imprima</h3>
+          <p>Selecione as peças e prepare a impressão com o guia de configuração incluso.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <div>
+          <h3>Venda</h3>
+          <p>Use a tabela de preços e os mockups prontos para divulgar sem esforço extra.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BENEFÍCIOS ===================== -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">O que muda na prática</p>
+    <h2 style="margin-top:12px;">Cada item resolve um travamento real</h2>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <span class="tag">Arquivos</span>
+        <h3>+100 STL prontos</h3>
+        <p>Não precisa modelar nada — a sensação de estar pronto para começar hoje.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="tag">Direção comercial</span>
+        <h3>Guia dos mais vendidos</h3>
+        <p>Você sabe o que priorizar imprimir, com confiança na decisão.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="tag">Precificação</span>
+        <h3>Tabela de preços</h3>
+        <p>Evita vender no prejuízo e traz segurança financeira desde a primeira peça.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="tag">Impressão</span>
+        <h3>Guia de configuração</h3>
+        <p>Menos erro, menos desperdício de material, menos frustração técnica.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="tag">Divulgação</span>
+        <h3>Mockups prontos</h3>
+        <p>Anúncio com cara profissional sem precisar de fotógrafo.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="tag">Acabamento</span>
+        <h3>Guia de pintura</h3>
+        <p>Peça com aspecto mais valorizado — e orgulho do resultado final.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABUNDÂNCIA / GALERIA ===================== -->
+<section class="section-alt">
+  <div class="wrap">
+    <p class="eyebrow">O que você recebe</p>
+    <h2 style="margin-top:12px;">Um catálogo por categoria, não uma pasta bagunçada</h2>
+    <div class="gallery-grid">
+      <div class="gallery-card" style="background-image:linear-gradient(180deg, rgba(36,30,26,0.05) 40%, rgba(20,15,12,0.75) 100%), url('images/img-jpeg-02.jpg');">
+        <span>Santos e Santas</span><small>28 modelos</small>
+      </div>
+      <div class="gallery-card" style="background-image:linear-gradient(180deg, rgba(36,30,26,0.05) 40%, rgba(20,15,12,0.75) 100%), url('images/img-jpeg-03.jpg');">
+        <span>Crucifixos</span><small>19 modelos</small>
+      </div>
+      <div class="gallery-card" style="background-image:linear-gradient(180deg, rgba(36,30,26,0.05) 40%, rgba(20,15,12,0.75) 100%), url('images/img-jpeg-04.jpg');">
+        <span>Terços e acessórios</span><small>22 modelos</small>
+      </div>
+      <div class="gallery-card" style="background-image:linear-gradient(180deg, rgba(36,30,26,0.05) 40%, rgba(20,15,12,0.75) 100%), url('images/img-jpeg-05.jpg');">
+        <span>Peças de mesa</span><small>31 modelos</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MODELOS CATÓLICOS (CARROSSÉIS) ===================== -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Catálogo real</p>
+    <h2 style="margin-top:12px;">Veja alguns dos modelos católicos que você pode imprimir</h2>
+    <p class="lede" style="margin-top:10px;">Uma pequena amostra do que está incluso — arraste para o lado e veja mais.</p>
+  </div>
+
+  <div class="carousel-wrap">
+    <button class="carousel-arrow prev" onclick="document.getElementById('row1').scrollBy({left:-320,behavior:'smooth'})" aria-label="Ver anteriores">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="var(--wine)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="model-row" id="row1">
+        <div class="model-card">
+          <img src="images/img-jpeg-06.jpg" alt="Jesus e Maria em oração">
+          <span>Jesus e Maria em oração</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-07.jpg" alt="Jesus com vela votiva">
+          <span>Jesus com vela votiva</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-08.jpg" alt="São Miguel Arcanjo">
+          <span>São Miguel Arcanjo</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-09.jpg" alt="Sagrado Coração de Jesus">
+          <span>Sagrado Coração de Jesus</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-10.jpg" alt="Kit de terços em bandeja">
+          <span>Kit de terços em bandeja</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-11.jpg" alt="Busto Coroa de Espinhos">
+          <span>Busto Coroa de Espinhos</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-12.jpg" alt="Crucifixo INRI">
+          <span>Crucifixo INRI</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-13.jpg" alt="Sagrado Coração dourado">
+          <span>Sagrado Coração dourado</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-14.jpg" alt="Jesus em manto orante">
+          <span>Jesus em manto orante</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-15.jpg" alt="Nossa Senhora com vela">
+          <span>Nossa Senhora com vela</span>
+        </div>
+  </div>
+    <button class="carousel-arrow next" onclick="document.getElementById('row1').scrollBy({left:320,behavior:'smooth'})" aria-label="Ver próximos">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="var(--wine)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <div class="carousel-wrap" style="margin-top:12px;">
+    <button class="carousel-arrow prev" onclick="document.getElementById('row2').scrollBy({left:-320,behavior:'smooth'})" aria-label="Ver anteriores">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="var(--wine)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="model-row" id="row2">
+        <div class="model-card">
+          <img src="images/img-jpeg-16.jpg" alt="Presépio Sagrada Família">
+          <span>Presépio Sagrada Família</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-17.jpg" alt="Placa Tudo Posso em Cristo">
+          <span>Placa Tudo Posso em Cristo</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-18.jpg" alt="Pomba da Paz">
+          <span>Pomba da Paz</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-19.jpg" alt="Nossa Senhora Coroada">
+          <span>Nossa Senhora Coroada</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-20.jpg" alt="Painel Nossa Senhora">
+          <span>Painel Nossa Senhora</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-21.jpg" alt="Oratório de parede">
+          <span>Oratório de parede</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-22.jpg" alt="Painel Sagrada Família">
+          <span>Painel Sagrada Família</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-23.jpg" alt="Cruz Face de Cristo">
+          <span>Cruz Face de Cristo</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-24.jpg" alt="Presépio natalino">
+          <span>Presépio natalino</span>
+        </div>
+        <div class="model-card">
+          <img src="images/img-jpeg-25.jpg" alt="Terço decorativo">
+          <span>Terço decorativo</span>
+        </div>
+  </div>
+    <button class="carousel-arrow next" onclick="document.getElementById('row2').scrollBy({left:320,behavior:'smooth'})" aria-label="Ver próximos">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="var(--wine)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- ===================== PROVA ===================== -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Quem já usa</p>
+    <h2 style="margin-top:12px;">Resultado de quem começou antes de você</h2>
+    <div class="proof-card">
+      <p class="eyebrow">Espaço reservado</p>
+      <p>[Inserir depoimento real aqui — nome, o que a pessoa vendeu e em quanto tempo. Este bloco não deve ser publicado sem uma prova verificável.]</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMPARAÇÃO ===================== -->
+<section class="section-alt">
+  <div class="wrap">
+    <p class="eyebrow">Antes e depois</p>
+    <h2 style="margin-top:12px;">A diferença está no que você já tem pronto</h2>
+    <div class="compare">
+      <div class="compare-col bad">
+        <h4>Sem o catálogo pronto</h4>
+        <ul>
+          <li>— Procurar arquivo por arquivo, sem saber se vende</li>
+          <li>— Testar preço no chute</li>
+          <li>— Errar configuração e desperdiçar material</li>
+          <li>— Divulgar sem fotos profissionais</li>
+        </ul>
+      </div>
+      <div class="compare-col good">
+        <h4>Com o Mega Pack Católico 3D</h4>
+        <ul>
+          <li>✓ +100 arquivos selecionados prontos</li>
+          <li>✓ Tabela de preço pronta</li>
+          <li>✓ Guia de configuração testado</li>
+          <li>✓ Mockups prontos para divulgar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BÔNUS ===================== -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Incluso no plano completo</p>
+    <h2 style="margin-top:12px;">5 bônus, cada um resolvendo um travamento</h2>
+    <div class="bonus-grid">
+      <div class="bonus-card">
+        <img class="bonus-cover" src="images/img-jpeg-26.jpg" alt="Pack de Chaveiros Católicos em STL">
+        <div><span class="bonus-tag">Bônus 1</span><h3>Pack de Chaveiros Católicos em STL</h3><p>Modelos extras de chaveiros religiosos para imprimir e vender como lembrancinhas ou presentes.</p></div>
+      </div>
+      <div class="bonus-card">
+        <img class="bonus-cover" src="images/img-jpeg-27.jpg" alt="Tabela de Precificação para peças impressas em 3D">
+        <div><span class="bonus-tag">Bônus 2</span><h3>Tabela de Precificação</h3><p>Saiba quanto cobrar pelas suas peças considerando material, tempo de impressão e acabamento.</p></div>
+      </div>
+      <div class="bonus-card">
+        <img class="bonus-cover" src="images/img-jpeg-28.jpg" alt="Checklist de Impressão sem Erro">
+        <div><span class="bonus-tag">Bônus 3</span><h3>Checklist de Impressão sem Erro</h3><p>Lista prática para evitar falhas, desperdício de filamento e retrabalho.</p></div>
+      </div>
+      <div class="bonus-card">
+        <img class="bonus-cover" src="images/img-jpeg-29.jpg" alt="Mockups e Artes para Divulgação Católica">
+        <div><span class="bonus-tag">Bônus 4</span><h3>Mockups e Artes para Divulgação</h3><p>Imagens prontas para divulgar seus produtos nas redes sociais e no WhatsApp.</p></div>
+      </div>
+      <div class="bonus-card">
+        <img class="bonus-cover" src="images/img-jpeg-30.jpg" alt="Pack Extra de Suportes e Bases para Peças Católicas">
+        <div><span class="bonus-tag">Bônus 5</span><h3>Pack Extra de Suportes e Bases</h3><p>Modelos extras de bases e suportes para valorizar santos, crucifixos e peças religiosas.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OFERTA ===================== -->
+<section class="section-alt" id="oferta">
+  <div class="wrap">
+    <p class="eyebrow">Escolha seu acesso</p>
+    <h2 style="margin-top:12px;">Um pagamento. Catálogo pronto hoje.</h2>
+
+    <div class="plans">
+      <div class="plan">
+        <img src="images/img-jpeg-31.jpg" alt="Mega Pack Católico 3D — estátuas em STL" class="plan-cover-img">
+        <h3>Básico</h3>
+        <div class="price">R$10,90</div>
+        <div class="installment">ou 2x de R$5,45</div>
+        <ul>
+          <li>+ +100 modelos católicos STL</li>
+          <li>+ Arquivos organizados</li>
+          <li>+ Compatível com impressoras 3D</li>
+          <li>+ Acesso imediato</li>
+        </ul>
+        <a href="#" class="plan-cta" id="btn-basico">Quero o plano básico</a>
+      </div>
+
+      <div class="plan featured">
+        <img src="images/img-jpeg-32.jpg" alt="Mega Pack Católico 3D — peças e bônus inclusos" class="plan-cover-img contain">
+        <span class="plan-badge">Mais escolhido</span>
+        <h3>Completo</h3>
+        <div class="was">De R$67</div>
+        <div class="price">R$29,90</div>
+        <div class="installment">ou 3x de R$9,97</div>
+        <ul>
+          <li>✓ +100 modelos católicos STL</li>
+          <li>✓ Bônus 1: Pack de Suportes e Bases Católicas</li>
+          <li>✓ Bônus 2: Pack de Chaveiros Católicos em STL</li>
+          <li>✓ Bônus 3: Tabela de Precificação 3D</li>
+          <li>✓ Bônus 4: Mockups e Artes para Divulgação</li>
+          <li>✓ Bônus 5: Guia de Acabamento e Pós-Produção</li>
+          <li>✓ Bônus 6: Checklist de Impressão Sem Erro</li>
+          <li>✓ Comunidade exclusiva</li>
+          <li>✓ Acesso vitalício</li>
+          <li>✓ Envio imediato</li>
+          <li>✓ Garantia de 15 dias</li>
+        </ul>
+        <a href="#" class="plan-cta">Quero o catálogo completo</a>
+      </div>
+    </div>
+
+    <div class="anchor-note">
+      O plano completo custa menos do que comprar os arquivos e os guias separadamente — e ainda inclui acesso vitalício em vez de temporário.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GARANTIA ===================== -->
+<section>
+  <div class="wrap">
+    <div class="guarantee">
+<img class="guarantee-badge" src="images/img-png-01.png" alt="Selo de garantia de 14 dias">
+      <div>
+        <h3>Garantia de 14 dias</h3>
+        <p>Se dentro desse prazo você sentir que o material não é ideal para o seu negócio, é só pedir o reembolso — devolução de 100% do valor, sem burocracia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section-alt">
+  <div class="wrap">
+    <p class="eyebrow">Perguntas frequentes</p>
+    <h2 style="margin-top:12px;">Antes de decidir</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Preciso saber modelar em 3D? <span class="faq-plus"></span></summary>
+        <p>Não. Todos os arquivos já vêm prontos para imprimir — você só baixa, fatia no seu programa e imprime.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Isso realmente vende? <span class="faq-plus"></span></summary>
+        <p>O pack inclui um guia com os produtos católicos de maior procura, para você priorizar o que tem mais chance de venda no seu público.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Vou saber configurar a impressão corretamente? <span class="faq-plus"></span></summary>
+        <p>Sim. O guia de configuração incluso no plano completo mostra os ajustes recomendados para reduzir erro e desperdício de material.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Como recebo o material? <span class="faq-plus"></span></summary>
+        <p>Acesso imediato após aprovação do pagamento, por e-mail e WhatsApp.</p>
+      </details>
+      <details class="faq-item">
+        <summary>O material é físico ou digital? <span class="faq-plus"></span></summary>
+        <p>100% digital (arquivos STL). Você mesmo imprime, quantas vezes quiser.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quais formas de pagamento posso usar? <span class="faq-plus"></span></summary>
+        <p>Pix (liberação imediata) ou cartão de crédito.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Tenho suporte se tiver dúvida? <span class="faq-plus"></span></summary>
+        <p>Sim, suporte disponível por WhatsApp.</p>
+      </details>
+      <details class="faq-item">
+        <summary>O pagamento é seguro? <span class="faq-plus"></span></summary>
+        <p>Sim, processado por plataforma de pagamento com criptografia.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section class="final">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--gold-soft);">Última chamada</p>
+    <h2 style="margin-top:12px;">Sua impressora não precisa ficar mais um mês parada</h2>
+    <p>+100 peças prontas para imprimir e vender, com preço definido, configuração testada e material de divulgação pronto. Risco zero: 14 dias de garantia.</p>
+    <a href="#oferta" class="cta-primary">Quero meu catálogo completo agora</a>
+    <div class="microproof">
+      <span><span class="dot"></span>Acesso imediato</span>
+      <span><span class="dot"></span>Garantia de 14 dias</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Produto digital. Uso pessoal e comercial conforme termos de licença. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- ===================== STICKY CTA (mobile) ===================== -->
+<div class="sticky-cta">
+  <div class="info">
+    <div class="p">R$29,90</div>
+    <div class="l">ou 3x de R$9,97</div>
+  </div>
+  <a href="#oferta" class="cta-primary" style="flex:1;">Quero o catálogo</a>
+</div>
+
+<!-- ===================== MODAL DE UPGRADE (ORDER BUMP) ===================== -->
+<div id="upgrade-overlay" class="upgrade-overlay" role="dialog" aria-modal="true" aria-labelledby="upgrade-title">
+  <div class="upgrade-modal">
+    <div class="upgrade-badge">⚠ Oferta única — aparece só agora</div>
+    <h3 id="upgrade-title">Espera! Antes de continuar com o Básico...</h3>
+    <p class="upgrade-sub">Você pode destravar o <strong>Catálogo Completo</strong> (+6 bônus, comunidade exclusiva e acesso vitalício) pagando muito pouco a mais — mas essa condição especial não volta a aparecer.</p>
+
+    <div class="upgrade-compare">
+      <div class="upgrade-col">
+        <div class="upgrade-col-label">Seu pedido atual</div>
+        <div class="upgrade-col-name">Plano Básico</div>
+        <div class="upgrade-col-price">R$10,90</div>
+        <div class="upgrade-col-installment">ou 2x de R$5,45</div>
+      </div>
+      <div class="upgrade-arrow">→</div>
+      <div class="upgrade-col upgrade-col-highlight">
+        <div class="upgrade-col-label">Com o desconto</div>
+        <div class="upgrade-col-name">Catálogo Completo</div>
+        <div class="upgrade-col-was">De R$29,90</div>
+        <div class="upgrade-col-price">R$19,90</div>
+        <div class="upgrade-col-installment">ou 2x de R$9,95</div>
+      </div>
+    </div>
+
+    <div class="upgrade-urgency">
+      <span class="upgrade-urgency-dot"></span>
+      Esta condição expira em <span id="upgrade-timer">05:00</span> — restam poucas vagas nesta liberação
+    </div>
+
+    <div class="upgrade-actions">
+      <button type="button" id="upgrade-accept" class="upgrade-btn upgrade-btn-accept">Sim, quero o desconto</button>
+      <button type="button" id="upgrade-decline" class="upgrade-btn upgrade-btn-decline">Não, quero só o Básico</button>
+    </div>
+  </div>
+</div>
+
+<style>
+.upgrade-overlay{
+  display:none;
+  position:fixed; inset:0;
+  background:rgba(20,14,10,.62);
+  z-index:9999;
+  align-items:center; justify-content:center;
+  padding:16px;
+}
+.upgrade-overlay.open{ display:flex; }
+.upgrade-modal{
+  background:#FFFDF8;
+  border-radius:18px;
+  max-width:460px; width:100%;
+  padding:26px 24px 24px;
+  box-shadow:0 24px 60px rgba(0,0,0,.35);
+  font-family:'Work Sans', sans-serif;
+  color:var(--ink, #2A2016);
+  position:relative;
+  max-height:92vh; overflow-y:auto;
+}
+.upgrade-badge{
+  display:inline-block;
+  background:var(--wine, #6E1B2B);
+  color:#fff;
+  font-size:11.5px;
+  font-weight:700;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  padding:6px 12px;
+  border-radius:999px;
+  margin-bottom:14px;
+}
+.upgrade-modal h3{
+  font-family:'Fraunces', serif;
+  font-size:21px;
+  line-height:1.25;
+  margin:0 0 10px;
+}
+.upgrade-sub{
+  font-size:14.5px;
+  line-height:1.5;
+  color:#4A3B2C;
+  margin:0 0 18px;
+}
+.upgrade-compare{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#F3ECDD;
+  border-radius:14px;
+  padding:14px;
+  margin-bottom:16px;
+}
+.upgrade-col{ flex:1; text-align:center; }
+.upgrade-col-label{ font-size:10.5px; text-transform:uppercase; letter-spacing:.04em; color:#8A7A66; margin-bottom:4px; }
+.upgrade-col-name{ font-family:'Fraunces', serif; font-weight:600; font-size:14.5px; margin-bottom:2px; }
+.upgrade-col-price{ font-family:'Fraunces', serif; font-weight:700; font-size:20px; color:var(--ink,#2A2016); }
+.upgrade-col-was{ font-size:12px; text-decoration:line-through; color:#9A8B77; }
+.upgrade-col-installment{ font-size:11px; color:#8A7A66; margin-top:1px; }
+.upgrade-col-highlight{
+  background:var(--wine,#6E1B2B);
+  color:#F3E7E7;
+  border-radius:10px;
+  padding:8px 6px;
+}
+.upgrade-col-highlight .upgrade-col-label{ color:#E7C9CE; }
+.upgrade-col-highlight .upgrade-col-name{ color:#fff; }
+.upgrade-col-highlight .upgrade-col-price{ color:#fff; }
+.upgrade-col-highlight .upgrade-col-was{ color:#E7BFC5; }
+.upgrade-col-highlight .upgrade-col-installment{ color:#E7C9CE; }
+.upgrade-arrow{ font-size:18px; color:#8A7A66; }
+.upgrade-list{
+  list-style:none; margin:0 0 16px; padding:0;
+  font-size:14px; line-height:1.9;
+}
+.upgrade-urgency{
+  display:flex; align-items:center; gap:8px;
+  background:#FBEAEA;
+  color:#7A2222;
+  font-size:12.5px;
+  font-weight:600;
+  padding:9px 12px;
+  border-radius:10px;
+  margin-bottom:18px;
+}
+.upgrade-urgency-dot{
+  width:8px; height:8px; border-radius:50%;
+  background:#C23B3B;
+  flex:0 0 auto;
+  animation:upgradePulse 1.1s infinite;
+}
+@keyframes upgradePulse{
+  0%{ box-shadow:0 0 0 0 rgba(194,59,59,.55); }
+  70%{ box-shadow:0 0 0 7px rgba(194,59,59,0); }
+  100%{ box-shadow:0 0 0 0 rgba(194,59,59,0); }
+}
+.upgrade-actions{ display:flex; flex-direction:column; gap:10px; }
+.upgrade-btn{
+  border:none; cursor:pointer;
+  font-family:'Work Sans', sans-serif;
+  font-weight:700;
+  font-size:14.5px;
+  padding:14px 16px;
+  border-radius:10px;
+  transition:transform .12s ease, filter .12s ease;
+}
+.upgrade-btn:active{ transform:scale(.98); }
+.upgrade-btn-accept{
+  background:#2E9A4B;
+  color:#fff;
+}
+.upgrade-btn-accept:hover{ filter:brightness(1.06); }
+.upgrade-btn-decline{
+  background:#C23B3B;
+  color:#fff;
+}
+.upgrade-btn-decline:hover{ filter:brightness(1.06); }
+</style>
+
+<script>
+(function(){
+  var basicBtn = document.getElementById('btn-basico');
+  var overlay = document.getElementById('upgrade-overlay');
+  var acceptBtn = document.getElementById('upgrade-accept');
+  var declineBtn = document.getElementById('upgrade-decline');
+  var timerEl = document.getElementById('upgrade-timer');
+  var timerInterval = null;
+
+  function startTimer(seconds){
+    clearInterval(timerInterval);
+    var remaining = seconds;
+    function render(){
+      var m = Math.floor(remaining / 60);
+      var s = remaining % 60;
+      timerEl.textContent = (m < 10 ? '0' + m : m) + ':' + (s < 10 ? '0' + s : s);
+    }
+    render();
+    timerInterval = setInterval(function(){
+      remaining--;
+      if (remaining <= 0) {
+        remaining = 0;
+        render();
+        clearInterval(timerInterval);
+        return;
+      }
+      render();
+    }, 1000);
+  }
+
+  function openModal(){
+    overlay.classList.add('open');
+    startTimer(300); // 5 minutos
+  }
+
+  function closeModal(){
+    overlay.classList.remove('open');
+    clearInterval(timerInterval);
+  }
+
+  if (basicBtn) {
+    basicBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      openModal();
+    });
+  }
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', function(){
+      // TODO: substituir pelo link de checkout do plano completo com desconto
+      closeModal();
+      window.location.href = '#oferta';
+    });
+  }
+
+  if (declineBtn) {
+    declineBtn.addEventListener('click', function(){
+      // TODO: substituir pelo link de checkout do plano básico
+      closeModal();
+      window.location.href = '#';
+    });
+  }
+
+  overlay.addEventListener('click', function(e){
+    if (e.target === overlay) closeModal();
+  });
+})();
+</script>
+
+</body>
+</html>
